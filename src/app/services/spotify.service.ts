@@ -29,8 +29,9 @@ export class SpotifyService {
   }
 
   getArtista ( termino: string ) {
-    return this.getQuery(`search?q=${ termino }&type=artist&limit=15`) //Ese parametro en backticks se llama template-string
+    return this.getQuery(`search?q=${ termino }&type=artist&limit=15`) // Ese parametro en backticks se llama template-string
     .pipe( map( data => data['artists'].items)); // Cuando en una funcion de flecha es un return de una sola linea, se puede escribir asi
+
   }
 
 }
